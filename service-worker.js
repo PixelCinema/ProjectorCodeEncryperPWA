@@ -1,12 +1,12 @@
 const CACHE_NAME = 'hdcp-cache-v2';
 const FILES_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/main.js',
-  '/manifest.json',
-  '/icons/icon-192.png',
-  'openssl.wasm',
-  'openssl.js'
+  './',
+  './index.html',
+  './main.js',
+  './manifest.json',
+  './icons/icon-192.png',
+  './openssl.wasm',
+  './openssl.js'
 ];
 
 // نصب: فایل‌ها رو کش می‌کنیم
@@ -41,4 +41,5 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
 
