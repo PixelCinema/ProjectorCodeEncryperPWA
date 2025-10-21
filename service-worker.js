@@ -4,7 +4,6 @@ const FILES_TO_CACHE = [
   './index.html',
   './main.js',
   './manifest.json',
-  './icons/icon-192.png',
   './openssl.wasm',
   './openssl.js'
 ];
@@ -41,6 +40,7 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
 
 
 
