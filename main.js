@@ -115,7 +115,7 @@ generateBtn.addEventListener('click', async () => {
 
   try {
     // let password = await calcSHA256()
-    const inputTime = new Date(`${date} GMT+0330`).getTime() + (hour * 60 * 60);
+    const inputTime = new Date(`${date} 00:00:00`).getTime() + (hour * 60 * 60);
     console.debug(`generateBtn onclick(): inputTime is ${inputTime}`);
     // const uuid 
     let password = await encrypt(`${projectorCode}:${inputTime}`, uuid, false);
