@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hdcp-cache-v4';
+const CACHE_NAME = 'hdcp-cache-v5';
 const FILES_TO_CACHE = [
   './',
   './index.html',
@@ -40,6 +40,7 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
 
 
 
