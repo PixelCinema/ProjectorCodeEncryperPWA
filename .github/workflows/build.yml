@@ -11,7 +11,7 @@ on:
           description: Which JS engine to be used(does not work)
           default: 'bun'
           required: true
-          options: 
+          options:
           - node
           - bun
         # message:
@@ -19,6 +19,7 @@ on:
         targets:
           type: string
           description: comma-seperated list of tagets embeded in apk
+          default: "arm64"
 
 
 permissions:
@@ -136,7 +137,7 @@ jobs:
 
       - name: Rename APK file
         run: |
-          mv ./src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release.apk ./src-tauri/gen/android/app/build/outputs/apk/universal/release/${{env.APP_NAME}}-${{ steps.app-version.outputs.version_string }}.apk
+          mv ./src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release-unsigned.apk ./src-tauri/gen/android/app/build/outputs/apk/universal/release/${{env.APP_NAME}}-${{ steps.app-version.outputs.version_string }}.apk
         
       - name: Setup tmate session
         if: ${{ failure() }}
