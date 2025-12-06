@@ -120,6 +120,7 @@ generateBtn.addEventListener('click', async () => {
     // const uuid 
     let password = await encrypt(`${projectorCode}:${inputTime}`, uuid, false);
     password = await ArraybufferToBase64(password);
+    password = password.substring(0, 10); // Shorten it
     console.log(`password is ${password}`);
     passwordOutput.textContent = `HDCP Password: ${password}`;
     passwordOutput.style.color = "#327c34";
